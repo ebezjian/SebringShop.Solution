@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SebringShop.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace SebringShop.Controllers
 {
@@ -30,6 +31,13 @@ namespace SebringShop.Controllers
     public ActionResult<Shop> Get(int id)
     {
       return _db.Shops.FirstOrDefault(entry => entry.ShopId == id);
+    }
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] Shop shop)
+    {
+      shop.ShopId = id;
+      _db.Entry(shop).State = EntityState.Modified;
+      _db.SaveChanges();
     }
   }
 }
