@@ -15,6 +15,11 @@ namespace SebringClient.Models
 
     public string ResturantType { get; set; }
     public bool ResturantDelivery { get; set; }
+    public static void Put (Resturant resturant)
+    {
+      string jsonResturant = JsonConvert.SerializeObject(resturant);
+      var apiCallTask = ApiHelper.Put(resturant.ResturantId, jsonResturant);
+    }
     public static List<Resturant> GetResturants()
     {
       var apiCallTask = ApiHelper.GetAll();

@@ -19,5 +19,22 @@ namespace SebringClient.Models
       var responseShops = await client.ExecuteTaskAsync(requestShops);
       return responseShops.Content;      
     }
+
+    public static async Task Post(string newResturant)
+    {
+      RestClient client = new RestClient ("http://localhost:5000/api");
+      RestRequest requestResturants = new RestRequest($"resturants", Method.POST);
+      requestResturants.AddHeader("Content-Type", "application/json");
+      requestResturants.AddJsonBody(newResturant);
+      var responseResturants = await client.ExecuteTaskAsync(requestResturants);
+    }
+    public static async Task Post(string newShop)
+    {
+      RestClient client = new RestClient ("http://localhost:5000/api");
+      RestRequest requestShops = new RestRequest($"shops", Method.POST);
+      requestShops.AddHeader("Content-Type", "application/json");
+      requestShops.AddJsonBody(newShop);
+      var responseShops = await client.ExecuteTaskAsync(requestShops);
+    }
   }
 }
