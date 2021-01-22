@@ -1,6 +1,6 @@
 using System;
 
-namespace sebringclient.Models
+namespace SebringClient.Models
 {
     public class ErrorViewModel
     {
