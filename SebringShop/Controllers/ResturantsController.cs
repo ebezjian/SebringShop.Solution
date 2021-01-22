@@ -39,5 +39,12 @@ namespace SebringShop.Controllers
       _db.Entry(resturant).State = EntityState.Modified;
       _db.SaveChanges();
     }
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+      var resturantToDelete = _db.Resturants.FirstOrDefault(entry => entry.ResturantId == id);
+      _db.Resturants.Remove(resturantToDelete);
+      _db.SaveChanges();
+    }
   }
 }
