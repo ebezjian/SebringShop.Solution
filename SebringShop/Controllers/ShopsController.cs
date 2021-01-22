@@ -16,8 +16,21 @@ namespace SebringShop.Controllers
       _db = db;
     }
     [HttpGet]
-    public ActionResult<IEnumerable<Shop>> Get()
+    public ActionResult<IEnumerable<Shop>> Get(string shopname, string shopaddress, string shoptype)
     {
+      var query =_db.Shops.AsQueryable();
+      if (shopname != null)
+      {
+        query = query.Where(entry => entry.ShopName == shopname);
+      }
+      if (shopaddress != null)
+      {
+        query = query.Where(entry => entry.ShopAddress == shopaddress);
+      }
+      if (shoptype != null)
+      {
+        query = query.Where(entry => entry.ShopType == shoptype);
+      }
       return _db.Shops.ToList();
     }
 
