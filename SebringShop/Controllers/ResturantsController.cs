@@ -26,5 +26,10 @@ namespace SebringShop.Controllers
       _db.Resturants.Add(resturant);
       _db.SaveChanges();
     }
+    [HttpGet("{id}")]
+    public ActionResult<Resturant> Get(int id)
+    {
+      return _db.Resturants.FirstOrDefault(entry => entry.ResturantId == id);
+    }
   }
 }
