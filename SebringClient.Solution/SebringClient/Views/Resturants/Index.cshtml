@@ -1,0 +1,15 @@
+<h1>All Resturants</h1>
+<ol>
+  @foreach (Resturant resturant in Model)
+  {
+    <ul>
+      <li>ID: @resturant.ResturantId</li>
+      <li>Name: @resturant.ResturantName</li>
+      <li>Address: @resturant.ResturantAddress</li>
+      <li>Type of Food: @resturant.ResturantFoodType</li>
+      <li>Do they Deliver?: @resturant.ResturantDelivery</li>
+    </ul>
+    <a href="/Resturants/Details/@(resturant.ResturantId)">Details</a>
+    <br>
+  }
+</ol>
