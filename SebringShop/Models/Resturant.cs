@@ -9,4 +9,4 @@ namespace SebringShop.Models
     
     public bool ResturantDelivery { get; set; }
   }
-}
+} 
