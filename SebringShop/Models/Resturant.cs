@@ -7,6 +7,6 @@ namespace SebringShop.Models
     public string ResturantAddress { get; set; }
     public string ResturantFoodType { get; set; }
     
-    public bool ResturantDeliveryMode { get; set; }
+    public bool ResturantDelivery { get; set; }
   }
 }
