@@ -52,5 +52,20 @@ namespace SebringClient.Models
       requestShops.AddJsonBody(newShop);
       var responseShops = await client.ExecuteTaskAsync(requestShops);
     }
+
+    public static async Task Delete(int id)
+    {
+      RestClient client = new RestClient ("http://localhost:5000/api");
+      RestRequest requestShops = new RestRequest($"shops/{id}", Method.DELETE);
+      requestShops.AddHeader("Content-Type", "application/json");
+      var responseShops = await client.ExecuteTaskAsync(requestShops);
+    }
+    public static async Task Delete (int id)
+    {
+      RestClient client = new RestClient ("http://localhost:5000/api");
+      RestRequest requestResturants = new RestRequest($"resturants/{id}", Method.DELETE);
+      requestResturants.AddHeader("Content-Type", "application/json");
+      var responseResturants = await client.ExecuteTaskAsync(requestResturants);
+    }
   }
 }
