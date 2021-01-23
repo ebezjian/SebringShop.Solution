@@ -42,5 +42,9 @@ namespace SebringClient.Models
       string jsonShop = JsonConvert.SerializeObject(shop);
       var apiCallTak = ApiHelper.Put(shop.ShopId, jsonShop);
     }
+        public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
   }
 }

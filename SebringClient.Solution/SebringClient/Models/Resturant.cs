@@ -43,5 +43,9 @@ namespace SebringClient.Models
       string jsonResturant = JsonConvert.SerializeObject(resturant);
       var apiCallTask = ApiHelper.Post(jsonResturant);
     }
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
   }
 }
