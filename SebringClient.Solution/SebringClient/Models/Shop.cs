@@ -31,5 +31,11 @@ namespace SebringClient.Models
       Shop shop = JsonConvert.DeserializeObject<Shop>(jsonResponse.ToString());
       return shop;
     }
+
+    public static void Post(Shop shop)
+    {
+      string JsonShop = JsonConvert.SerializeObject(shop);
+      var apiCallTask = ApiHelper.Post(jsonShop);
+    }
   }
 }
