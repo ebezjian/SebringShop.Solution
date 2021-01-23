@@ -37,5 +37,10 @@ namespace SebringClient.Models
       string JsonShop = JsonConvert.SerializeObject(shop);
       var apiCallTask = ApiHelper.Post(jsonShop);
     }
+    public static void Put (Shop shop)
+    {
+      string jsonShop = JsonConvert.SerializeObject(shop);
+      var apiCallTak = ApiHelper.Put(shop.ShopId, jsonShop);
+    }
   }
 }
