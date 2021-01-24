@@ -3,11 +3,15 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SebringShop.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
+using SebringShop.Services; 
+using SebringShop.Entities; 
 
 namespace SebringShop.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
+  [Authorize]
   public class ShopsController : ControllerBase
   {
     private SebringShopContext _db;
@@ -35,6 +39,7 @@ namespace SebringShop.Controllers
     }
 
     [HttpPost]
+    [AllowAnonymous]
     public void Post ([FromBody] Shop shop)
     {
       _db.Shops.Add(shop);
