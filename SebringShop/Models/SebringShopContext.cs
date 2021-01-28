@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
+
 namespace SebringShop.Models
 {
   public class SebringShopContext : DbContext
