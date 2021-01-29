@@ -35,7 +35,8 @@ This project uses the following technologies:
 - Entity Framework Core
 - Identity
 - Postman
-- JWT
+- Swagger
+- Swashbuckler
 
 -------------------
 
@@ -98,7 +99,18 @@ Feel free to navigate through the API endpoints via Postman or another API Clien
 
 - These are the following engpoints:
 
-`ResturantId`, `ResturantName`, `ResturantAddress`, `ResturantFoodType`, `ResturantDelivery`, `ShopId`, `ShopName`, `ShopAddress`, `ShopType`
+<img src="https://cdn.discordapp.com/attachments/537816642122547212/804669470874402846/endpoints.PNG">
+
+### Accessing SwaggerUI
+
+Launch the project from the `SebringShop` project directory by typing `dotnet run` into the terminal. Input `http://localhost:5000/swagger` to view and interact with the Swashbuckle SwaggerUI.
+<br>
+
+### Documentation Referenced for Swashbuckle Integration
+
+* [Microsoft Docs: Swagger Overview](https://docs.microsoft.com/en-us/aspnet/core/tutorials/web-api-help-pages-using-swagger?view=aspnetcore-5.0)
+* [Microsoft Docs: Get Started with Swashbuckle](https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio)
+* [GitHub Swashbuckle.AspNetCore README.md](https://github.com/domaindrivendev/Swashbuckle.AspNetCore/blob/master/README.md)
 
 #### Import Database using Entity Framework Core (option 1 continued):
 
