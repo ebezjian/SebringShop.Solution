@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SebringShop.Models;
 
-namespace sebringshop.Migrations
+namespace SebringShop.Migrations
 {
     [DbContext(typeof(SebringShopContext))]
     [Migration("20210122204334_SeedData")]

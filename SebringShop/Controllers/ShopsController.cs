@@ -3,9 +3,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SebringShop.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Authorization;
 
-using SebringShop.Entities; 
 
 namespace SebringShop.Controllers
 {

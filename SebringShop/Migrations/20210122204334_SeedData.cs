@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace sebringshop.Migrations
+namespace SebringShop.Migrations
 {
     public partial class SeedData : Migration
     {

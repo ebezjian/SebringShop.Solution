@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SebringShop.Models;
 
-namespace sebringshop.Migrations
+namespace SebringShop.Migrations
 {
     [DbContext(typeof(SebringShopContext))]
     partial class SebringShopContextModelSnapshot : ModelSnapshot

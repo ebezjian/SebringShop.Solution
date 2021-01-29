@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace sebringshop.Migrations
+namespace SebringShop.Migrations
 {
     public partial class Initial : Migration
     {

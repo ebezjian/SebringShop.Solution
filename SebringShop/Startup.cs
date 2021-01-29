@@ -6,11 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
-using System.Text;
-using SebringShop.Helpers; 
 
 
-namespace sebringshop
+
+
+namespace SebringShop
 {
     public class Startup
     {
@@ -26,11 +26,6 @@ namespace sebringshop
         {
             services.AddDbContext<SebringShopContext>(opt => opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            var appSettingsSection = Configuration.GetSection("AppSettings"); 
-            services.Configure<AppSettings>(appSettingsSection); 
-            var appSettings = appSettingsSection.Get<AppSettings>();
-            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
             services.AddSwaggerGen( c => 
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
