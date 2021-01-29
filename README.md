@@ -100,6 +100,11 @@ Feel free to navigate through the API endpoints via Postman or another API Clien
 - These are the following engpoints:
 
 <img src="https://cdn.discordapp.com/attachments/537816642122547212/804669470874402846/endpoints.PNG">
+<br>
+
+- these are the perameteres:
+
+<img src="https://cdn.discordapp.com/attachments/537816642122547212/804681366418620447/perams.PNG">
 
 ### Accessing SwaggerUI
 
